@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class PromptGenerator
 {
     // Lista de prompts. Mantida como atributo para que possa ser
-    // facilmente alterada/expandida sem afetar outras classes.
+    // easily changed or expanded without affecting other classes.
     public List<string> _prompts = new List<string>
     {
         "Who was the most interesting person I interacted with today?",
