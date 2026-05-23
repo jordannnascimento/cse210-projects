@@ -2,14 +2,14 @@ using System;
 
 public class Entry
 {
-    // Atributos (membros) da classe Entry
+    // Attributes (members) of the Entry class
     public string _date;
     public string _promptText;
     public string _entryText;
 
-    // Método responsável por exibir a entrada na tela.
-    // Manter o Display dentro da Entry segue o princípio de abstração:
-    // se mudarmos o que a Entry guarda, só essa classe precisa ser atualizada.
+    // Method responsible for displaying the input on the screen.
+    // Keeping the Display within the Entry follows the principle of abstraction:
+    // If we change what the Entry stores, only that class needs to be updated.
     public void Display()
     {
         Console.WriteLine($"Date: {_date} - Prompt: {_promptText}");

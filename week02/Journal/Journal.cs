@@ -4,21 +4,21 @@ using System.IO;
 
 public class Journal
 {
-    // Lista de entradas. Acessada sempre através dos métodos da classe (abstração).
+    // List of entries. Always accessed through the class methods.
     public List<Entry> _entries = new List<Entry>();
 
-    // Separador usado para salvar/carregar do arquivo.
-    // Usamos "~|~" pois é improvável aparecer no conteúdo do usuário.
+    // Separator used to save/load the file.
+    // We use "~|~" because it is unlikely to appear in user content.
     private string _separator = "~|~";
 
-    // Adiciona uma nova entrada ao diário.
+    // Adds a new entry to the journal.
     public void AddEntry(Entry newEntry)
     {
         _entries.Add(newEntry);
     }
 
-    // Exibe todas as entradas chamando o Display de cada uma.
-    // O Journal não precisa saber os detalhes de como uma Entry se exibe.
+    // Displays all entries by calling the Display event for each one.
+    // The Journal does not need to know the details of how an Entry is displayed.
     public void DisplayAll()
     {
         if (_entries.Count == 0)
@@ -33,7 +33,7 @@ public class Journal
         }
     }
 
-    // Salva todas as entradas em um arquivo.
+    // Saves all entries to a file.
     public void SaveToFile(string file)
     {
         using (StreamWriter outputFile = new StreamWriter(file))
@@ -46,7 +46,7 @@ public class Journal
         Console.WriteLine($"Journal saved to {file}\n");
     }
 
-    // Carrega entradas de um arquivo, substituindo as atuais.
+    // Loads entries from a file, replacing the current ones.
     public void LoadFromFile(string file)
     {
         if (!File.Exists(file))

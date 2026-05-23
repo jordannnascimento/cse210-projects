@@ -16,9 +16,9 @@ public class PromptGenerator
         "What am I grateful for today?"
     };
 
-    // Retorna um prompt aleatório da lista.
-    // Se no futuro buscarmos prompts de um banco de dados web,
-    // só esta classe precisará ser alterada.
+    // Returns a random prompt from the list.
+    // If in the future we retrieve prompts from a web database,
+    // only this class will need to be changed.
     public string GetRandomPrompt()
     {
         Random random = new Random();

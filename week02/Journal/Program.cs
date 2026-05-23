@@ -4,9 +4,9 @@ using System;
 // Journal Program - W02 Project
 //
 // Exceeding requirements:
-// - Lista de prompts expandida (mais de 5 prompts).
-// - Validação de entrada do usuário no menu (não quebra com input inválido).
-// - Mensagens amigáveis quando o diário está vazio ou o arquivo não existe.
+// - Expanded prompt list (more than 5 prompts).
+// - User input validation in the menu (does not break with invalid input).
+// - Messages when the journal is empty or the file does not exist.
 // =============================================================
 
 class Program
@@ -33,7 +33,7 @@ class Program
             switch (choice)
             {
                 case "1":
-                    // Escrever uma nova entrada
+                    // Write a new entrie
                     string prompt = promptGenerator.GetRandomPrompt();
                     Console.WriteLine($"\n{prompt}");
                     Console.Write("> ");
@@ -49,27 +49,27 @@ class Program
                     break;
 
                 case "2":
-                    // Exibir todas as entradas
+                    // Show all entries
                     Console.WriteLine();
                     journal.DisplayAll();
                     break;
 
                 case "3":
-                    // Carregar de arquivo
+                    // Load the file
                     Console.Write("What is the filename? ");
                     string loadFile = Console.ReadLine();
                     journal.LoadFromFile(loadFile);
                     break;
 
                 case "4":
-                    // Salvar em arquivo
+                    // Save the file
                     Console.Write("What is the filename? ");
                     string saveFile = Console.ReadLine();
                     journal.SaveToFile(saveFile);
                     break;
 
                 case "5":
-                    // Sair
+                    // QUit
                     running = false;
                     Console.WriteLine("Goodbye!");
                     break;
